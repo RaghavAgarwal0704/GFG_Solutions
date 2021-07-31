@@ -33,3 +33,17 @@ int equilibriumPoint(long long a[], int n) {
 1 3 5 2 2 11
 1 4 9 11 13
 */
+//-----------or--------------
+int equilibriumPoint(long long a[], int n) {
+    
+        // Your code here
+        if(n==1)return 1;
+        long long sum=0;
+        for(int i=0;i<n;i++)sum+=a[i];
+        long lsum=0;
+        for(int i=1;i<n;i++){
+            lsum+=a[i-1];
+            if(2*lsum==sum-a[i])return i+1;
+        }
+        return -1;
+    }
