@@ -1,4 +1,7 @@
 // { Driver Code Starts
+
+
+// for space optimization--use first row and first col as temp array
 #include <bits/stdc++.h>
 using namespace std;
 
